@@ -13,13 +13,17 @@ DUMP_SQL находится в ./drfsite/drfsite/settings.py.
 - Если DUMP_SQL True, то в консоли будут отображаться логи SQL-запросов вместе с временем его выполнения. 
 Работает только при DEBUG = True
 
-3. Настройте конфигурацию БД в ./drfsite/.env. Примените миграции:
+3. Установите виртуальное окружение для своей ОС. Установите зависимости:
+```bash
+pip install -r requirements.txt
+```
+4. Настройте конфигурацию БД в ./drfsite/.env. Примените миграции:
 ```bash
 python ./drfsite/manage.py makemigrations
 python ./drfsite/manage.py migrate
 ```
 
-4. Запустите проект:
+5. Запустите проект:
 ```bash
 python ./drfsite/manage.py runserver
 ```
